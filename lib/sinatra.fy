@@ -55,4 +55,17 @@ class Sinatra Request {
   forwards_unary_ruby_methods
 }
 
+class Rack Response {
+  forwards_unary_ruby_methods
+  alias_method: '[] for_ruby: '[]
+  alias_method: '[]: for_ruby: '[]=
+}
+
+class Rack Request {
+  forwards_unary_ruby_methods
+  alias_method: '[] for_ruby: '[]
+  alias_method: '[]: for_ruby: '[]=
+}
+
+
 enable: 'run
