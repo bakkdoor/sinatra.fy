@@ -49,6 +49,10 @@ class Sinatra Base {
   alias_method: 'redirect: for_ruby: 'redirect
   alias_method: 'to: for_ruby: 'to
   alias_method: 'content_type: for_ruby: 'content_type
+
+  def self helpers: block {
+    helpers(&block)
+  }
 }
 
 class Sinatra Request {
